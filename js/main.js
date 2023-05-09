@@ -48,7 +48,7 @@ if (ingresaUser) {
                 let SaldoTotal = Saldo - Retiro
                 Saldo = SaldoTotal
                 if (Retiro < 10000 && Retiro > 0) {
-                    alert(SaldoTotal)
+                    alert("Su Saldo es $" + Saldo)
                 }
                 else {
 
@@ -61,7 +61,7 @@ if (ingresaUser) {
                 let DepositoTotal = Saldo + Deposito;
                 Saldo = DepositoTotal;
 
-                alert(DepositoTotal)
+                alert("Su Saldo es $" + Saldo)
                 break;
 
         }
