@@ -521,5 +521,8 @@ header {
 }
 
 /*formulario de contacto final*/
+.logincustom a {
+  text-align: right;
+}
 
 /*# sourceMappingURL=style.css.map */
