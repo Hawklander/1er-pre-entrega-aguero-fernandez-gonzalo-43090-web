@@ -7,6 +7,7 @@
 
  /* Fuentes desde import  */
  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
+ @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 
 
@@ -564,143 +565,168 @@
 
  //formulario login
 
- @import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
-body, html {
-  height: 100%;
-}
-body {
-  font-family: 'Open Sans';
-  font-weight: 100;
-  display: flex;
-  overflow: hidden;
-}
-input {
-  ::-webkit-input-placeholder {
-     color: rgba(255,255,255,0.7);
-  }
-  ::-moz-placeholder {
-     color: rgba(255,255,255,0.7);  
-  }
-  :-ms-input-placeholder {  
-     color: rgba(255,255,255,0.7);  
-  }
-  &:focus {
-    outline: 0 transparent solid;
-    ::-webkit-input-placeholder {
-     color: rgba(0,0,0,0.7);
-    }
-    ::-moz-placeholder {
-       color: rgba(0,0,0,0.7);  
-    }
-    :-ms-input-placeholder {  
-       color: rgba(0,0,0,0.7);  
-    }
-  }
-}
-
-.login-form {
-  //background: #222;
-  //box-shadow: 0 0 1rem rgba(0,0,0,0.3);
-  min-height: 10rem;
-  margin: auto;
-  max-width: 50%;
-  padding: .5rem;
-}
-.login-text {
-  //background: hsl(40,30,60);
-  //border-bottom: .5rem solid white;
-  color: white;
-  font-size: 1.5rem;
-  margin: 0 auto;
-  max-width: 50%;
-  padding: .5rem;
-  text-align: center;
-  //text-shadow: 1px -1px 0 rgba(0,0,0,0.3);
-  .fa-stack-1x {
-    color: black;
-  }
-}
-
-.login-username, .login-password {
-  background: transparent;
-  border: 0 solid;
-  border-bottom: 1px solid rgba(white, .5);
-  color: white;
-  display: block;
-  margin: 1rem;
-  padding: .5rem;
-  transition: 250ms background ease-in;
-  width: calc(100% - 3rem);
-  &:focus {
-    background: white;
-    color: black;
-    transition: 250ms background ease-in;
-  }
-}
-
-.login-forgot-pass {
-  //border-bottom: 1px solid white;
-  bottom: 0;
-  color: white;
-  cursor: pointer;
-  display: block;
-  font-size: 75%;
-  left: 0;
-  opacity: 0.6;
-  padding: .5rem;
+.main {
   position: absolute;
-  text-align: center;
-  //text-decoration: none;
   width: 100%;
-  &:hover {
-    opacity: 1;
-  }
+  height: 100%;
+  padding: 20px;
+  margin: auto;
+  background-color: black;
 }
-.login-submit {
-  border: 1px solid white;
-  background: transparent;
+
+.contenedor__todo{
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.caja__trasera{
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 128, 255, 0.5);
+
+}
+
+.caja__trasera div{
+  margin: 100px 40px;
   color: white;
+  transition: all 500ms;
+}
+
+
+.caja__trasera div p,
+.caja__trasera button{
+  margin-top: 30px;
+}
+
+.caja__trasera div h3{
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.caja__trasera div p{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.caja__trasera button{
+  padding: 10px 40px;
+  border: 2px solid #fff;
+  font-size: 14px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  transition: all 300ms;
+}
+
+.caja__trasera button:hover{
+  background: #fff;
+  color: #46A2FD;
+}
+
+/*Formularios*/
+
+.contenedor__login-register{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  top: -185px;
+  left: 10px;
+
+  /*La transicion va despues del codigo JS*/
+  transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login-register form{
+  width: 100%;
+  padding: 80px 20px;
+  background: white;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.contenedor__login-register form h2{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #46A2FD;
+}
+
+.contenedor__login-register form input{
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #F2F2F2;
+  font-size: 16px;
+  outline: none;
+}
+
+.contenedor__login-register form button{
+  padding: 10px 40px;
+  margin-top: 40px;
+  border: none;
+  font-size: 14px;
+  background: #46A2FD;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+}
+
+
+
+
+.formulario__login{
+  opacity: 1;
   display: block;
-  margin: 1rem auto;
-  min-width: 1px;
-  padding: .25rem;
-  transition: 250ms background ease-in;
-  &:hover, &:focus {
-    background: white;
-    color: black;
-    transition: 250ms background ease-in;
+}
+.formulario__register{
+  display: none;
+}
+
+
+
+@media screen and (max-width: 850px){
+
+  main{
+      margin-top: 50px;
+  }
+
+  .caja__trasera{
+      max-width: 350px;
+      height: 300px;
+      flex-direction: column;
+      margin: auto;
+  }
+
+  .caja__trasera div{
+      margin: 0px;
+      position: absolute;
+  }
+
+
+  /*Formularios*/
+
+  .contenedor__login-register{
+      top: -10px;
+      left: -5px;
+      margin: auto;
+  }
+
+  .contenedor__login-register form{
+      position: relative;
   }
 }
 
-
-
-
-[class*=underlay] {
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: fixed;
-  top: 0;
-}
-.underlay-photo {
-  animation: hue-rotate 6s infinite;
-  background: url('https://31.media.tumblr.com/41c01e3f366d61793e5a3df70e46b462/tumblr_n4vc8sDHsd1st5lhmo1_1280.jpg');
-  background-size: cover;
-  -webkit-filter: grayscale(30%);
-  z-index: -1;
-}
-.underlay-black {
-  background: rgba(0,0,0,0.7);
-  z-index: -1;
-}
-
-@keyframes hue-rotate {
-  from {
-    -webkit-filter: grayscale(30%) hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: grayscale(30%) hue-rotate(360deg);
-  }
-}
+ 
