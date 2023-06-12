@@ -589,7 +589,7 @@
   justify-content: center;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  background-color: rgba(0, 128, 255, 0.5);
+  background-color:  $oscuro;
 
 }
 
@@ -731,15 +731,6 @@
 
 
  // CATALOGO CARRITO 
-
-/*.fondocatalogo {
-
-  
-  background-image: url( ../imagenes/imagencerebro.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-}
 
 /* Globales */
 *::after,
