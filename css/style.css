@@ -668,5 +668,10 @@ header {
     position: relative;
   }
 }
+.fondocatalogo {
+  background-image: url(../imagenes/imagencerebro.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /*# sourceMappingURL=style.css.map */
