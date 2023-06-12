@@ -1,138 +1,80 @@
+const productos = [
+    {
+        nombre: "REMERA",
+        precio: 1200,
+        marca: "adidas"
+    },
+    {
+        nombre: "PANTALON",
+        precio: 5000,
+        marca: "Hardway"
+    },
+    {
+        nombre: "Zapatillas",
+        precio: 20000,
+        marca: "Puma"
+    },
+    {
+        nombre: "Buzo",
+        precio: 10000,
+        marca: "Sin marca"
+    }
+];
 
+const divProducto = document.getElementById("productos");
+const divCarrito = document.getElementById("mostrarCarrito");
+const divCarritoTotal = document.getElementById("totalCarrito");
+const verCarrito = document.getElementById("carritoBtn");
 
-// intento para  imposibilitar ingreso a catalogo sin loguearse
-const user= JSON.parse(localStorage.getItem('login__success')) || false
-if (!user) {
+let carrito = [];
 
-    window.location.href = 'login.html'
-    
-}
+productos.forEach((producto) => {
+    let content = document.createElement("div");
+    content.innerHTML = `
+    <h2>${producto.nombre}</h2>
+    <p>${producto.precio}</p>
+    `;
 
-// carrito 
-const btnCart = document.querySelector('.container-cart-icon');
-const containerCartProducts = document.querySelector(
-	'.container-cart-products'
-);
+    divProducto.append(content);
 
-btnCart.addEventListener('click', () => {
-	containerCartProducts.classList.toggle('hidden-cart');
+    let comprar = document.createElement("button");
+    comprar.innerText = "Agregar al carrito"
+    content.append(comprar);
+    comprar.addEventListener("click", () => {
+        carrito.push({
+            marca: producto.marca,
+            nombre: producto.nombre,
+            precio: producto.precio
+        });
+    });
+
 });
 
-/* const  info productos y carrito */
-const cartInfo = document.querySelector('.cart-product');
-const rowProduct = document.querySelector('.row-product');
+let carritoMostrar;
 
-// Lista de todos los contenedores de productos
-const productsList = document.querySelector('.container-items');
-
-// Variable de arreglos de Productos
-let allProducts = [];
-
-const valorTotal = document.querySelector('.total-pagar');
-
-const countProducts = document.querySelector('#contador-productos');
-
-const cartEmpty = document.querySelector('.cart-empty');
-const cartTotal = document.querySelector('.cart-total');
-
-productsList.addEventListener('click', e => {
-	if (e.target.classList.contains('btn-add-cart')) {
-		const product = e.target.parentElement;
-
-		const infoProduct = {
-			quantity: 1,
-			title: product.querySelector('h2').textContent,
-			price: product.querySelector('p').textContent,
-		};
-
-		const exits = allProducts.some(
-			product => product.title === infoProduct.title
-		);
-
-		if (exits) {
-			const products = allProducts.map(product => {
-				if (product.title === infoProduct.title) {
-					product.quantity++;
-					return product;
-				} else {
-					return product;
-				}
-			});
-			allProducts = [...products];
-		} else {
-			allProducts = [...allProducts, infoProduct];
-		}
-
-		showHTML();
-	}
-});
-
-rowProduct.addEventListener('click', e => {
-	if (e.target.classList.contains('icon-close')) {
-		const product = e.target.parentElement;
-		const title = product.querySelector('p').textContent;
-
-		allProducts = allProducts.filter(
-			product => product.title !== title
-		);
-
-		console.log(allProducts);
-
-		showHTML();
-	}
-});
-
-// Funcion para mostrar  HTML
-const showHTML = () => {
-	if (!allProducts.length) {
-		cartEmpty.classList.remove('hidden');
-		rowProduct.classList.add('hidden');
-		cartTotal.classList.add('hidden');
-	} else {
-		cartEmpty.classList.add('hidden');
-		rowProduct.classList.remove('hidden');
-		cartTotal.classList.remove('hidden');
-	}
-
-	// Limpiar HTML
-	rowProduct.innerHTML = '';
-
-	let total = 0;
-	let totalOfProducts = 0;
-
-	allProducts.forEach(product => {
-		const containerProduct = document.createElement('div');
-		containerProduct.classList.add('cart-product');
-
-		containerProduct.innerHTML = `
-            <div class="info-cart-product">
-                <span class="cantidad-producto-carrito">${product.quantity}</span>
-                <p class="titulo-producto-carrito">${product.title}</p>
-                <span class="precio-producto-carrito">${product.price}</span>
-            </div>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-close"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                />
-            </svg>
+verCarrito.addEventListener("click", () => {
+    divCarrito.innerHTML = "";
+    divCarritoTotal.innerHTML = "";
+    carrito.forEach((carrito1) => {
+        let carritocontenido = document.createElement("div");
+        carritocontenido.innerHTML = `
+        <h2>${carrito1.nombre}</h2>
+        <p>${carrito1.precio}</p>
         `;
+        divCarrito.append(carritocontenido);
+    });
 
-		rowProduct.append(containerProduct);
+    
+    const total = carrito.reduce((acumulador, el) => acumulador + el.precio, 0);
+    const totalComprado = document.createElement("div");
+    if (total != 0) {
+        totalComprado.innerHTML = `<h2>Total a pagar: ${total} $ </h2>`;
+        divCarritoTotal.append(totalComprado);
+    }
 
-		total =
-			total + parseInt(product.quantity * product.price.slice(1));
-		totalOfProducts = totalOfProducts + product.quantity;
-	});
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    carrito = [];
+})
 
-	valorTotal.innerText = `$${total}`;
-	countProducts.innerText = totalOfProducts;
-};
+carritoMostrar = localStorage.getItem("carrito");
+console.log(carritoMostrar);
