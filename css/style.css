@@ -645,7 +645,7 @@ header {
 }
 
 @media screen and (max-width: 850px) {
-  main {
+  .mainregister {
     margin-top: 50px;
   }
   .caja__trasera {
