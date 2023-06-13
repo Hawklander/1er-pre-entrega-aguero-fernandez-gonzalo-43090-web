@@ -1,22 +1,22 @@
 const productos = [
     {
-        nombre: "REMERA",
-        precio: 1200,
-        marca: "adidas"
+        nombre: "App Login",
+        precio: 25000,
+        marca: "Hawk"
     },
     {
-        nombre: "PANTALON",
-        precio: 5000,
-        marca: "Hardway"
+        nombre: "App RRHH-BasicPack",
+        precio: 50000,
+        marca: "Hawk"
     },
     {
-        nombre: "Zapatillas",
-        precio: 20000,
-        marca: "Puma"
+        nombre: "App RRHH-EstrategicPack",
+        precio: 75000,
+        marca: "Hawk"
     },
     {
-        nombre: "Buzo",
-        precio: 10000,
+        nombre: "Web-Desing",
+        precio: 100000,
         marca: "Sin marca"
     }
 ];

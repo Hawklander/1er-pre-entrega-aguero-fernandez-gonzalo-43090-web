@@ -668,25 +668,39 @@ header {
     position: relative;
   }
 }
+.bannerCarrito {
+  background: url(../imagenes/fondocatalogo.jpg) fixed center/cover;
+  height: 1000px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
 .orden {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  color: #fff;
 }
 
 h1 {
   text-align: center;
+  color: azure;
+  font-weight: 600;
+  color: #fff;
 }
 
 .carritoDiv {
   display: flex;
   justify-content: center;
+  color: #fff;
 }
 
 .carrito {
   padding: 15px;
-  background-color: bisque;
+  background-color: #2e2c33;
   border-radius: 15px;
+  color: #fff;
 }
 
 .ordenCompra {
@@ -694,6 +708,12 @@ h1 {
   justify-content: flex-start;
   flex-direction: column;
   margin: 50px 10;
+  color: #fff;
+}
+
+.totalapagar {
+  color: #fff;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */
