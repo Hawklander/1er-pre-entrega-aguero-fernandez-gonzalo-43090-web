@@ -1,0 +1,5 @@
+la Entrega consta de : 
+
+por un lado un login funcional con registro (con funcion de inputs vacios a rellenar , registro en LS , href hacia pagina de catalogo  ) + css + funciones para movimiento en js
+por otro lado el catalogo con 4 productos utilizando lo solicitado para esta entrega 
+
