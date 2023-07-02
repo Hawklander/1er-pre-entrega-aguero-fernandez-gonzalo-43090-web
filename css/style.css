@@ -668,39 +668,32 @@ header {
     position: relative;
   }
 }
-.bannerCarrito {
-  background: url(../imagenes/fondocatalogo.jpg) fixed center/cover;
-  height: 1000px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
+/*CATOLOGO */
+.bodyCatalogo {
+  background-color: rgba(0, 0, 0, 0.863);
 }
 
 .orden {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  color: #fff;
 }
 
 h1 {
   text-align: center;
-  color: azure;
-  font-weight: 600;
-  color: #fff;
+  color: rgba(224, 225, 226, 0.7803921569);
 }
 
 .carritoDiv {
   display: flex;
   justify-content: center;
-  color: #fff;
 }
 
 .carrito {
   padding: 15px;
-  background-color: #2e2c33;
+  background-color: #04A1A8;
   border-radius: 15px;
-  color: #fff;
+  border: 0;
 }
 
 .ordenCompra {
@@ -708,12 +701,22 @@ h1 {
   justify-content: flex-start;
   flex-direction: column;
   margin: 50px 10;
-  color: #fff;
 }
 
-.totalapagar {
-  color: #fff;
-  font-weight: 500;
+.cuerpo {
+  justify-content: center;
+}
+
+.cardEstilo {
+  margin: 2%;
+}
+
+.btnAgregar {
+  margin: 1rem;
+}
+
+.cardestilo {
+  background-color: rgba(192, 192, 192, 0.829);
 }
 
 /*# sourceMappingURL=style.css.map */

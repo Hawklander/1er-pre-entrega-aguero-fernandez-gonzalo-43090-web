@@ -727,45 +727,33 @@
       position: relative;
   }
 }
+/*CATOLOGO */
 
+.bodyCatalogo {
 
- // CARRITO CATALOGO
+background-color: rgba(0, 0, 0, 0.863);
 
-
- .bannerCarrito {
-  background: url(../imagenes/fondocatalogo.jpg) fixed (center / cover);
-  height: 1000px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-
- 
 }
 
- .orden {
+
+.orden {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  color: #fff;
 }
 h1 {
   text-align: center;
-  color: azure;
-  font-weight: 600;
-  color: #fff;
-  
+  color: #e0e1e2c7;
 }
 .carritoDiv {
   display: flex;
   justify-content: center;
-  color: #fff;
-  
 }
 .carrito {
   padding: 15px;
-  background-color: $oscuro;
+  background-color: #04A1A8;
   border-radius: 15px;
-  color: #fff;
+  border: 0;
 }
 
 .ordenCompra {
@@ -773,15 +761,22 @@ h1 {
   justify-content: flex-start;
   flex-direction: column;
   margin: 50px 10;
-  color: #fff;
+}
+
+.cuerpo {
+  
+  justify-content: center;
+}
+
+.cardEstilo{
+  margin: 2%;
+}
+.btnAgregar{
+  margin: 1rem;
 }
 
 
-.totalapagar {
-
-  color: #fff;
-  font-weight: 500;
+.cardestilo {
+  background-color:rgba(192, 192, 192, 0.829); 
 }
 
-
- 

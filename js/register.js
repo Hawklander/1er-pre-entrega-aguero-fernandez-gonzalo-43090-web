@@ -1,5 +1,7 @@
 // Variables
 
+
+// EVENTOS
 const resgitroForm = document.querySelector('#registrar')
 resgitroForm.addEventListener('click' , (e)=> {
     
