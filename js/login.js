@@ -73,7 +73,7 @@ function register() {
 const loginForm = document.querySelector('#entrar')
 loginForm.addEventListener('click', (e) => {
 
- e.preventDefault()
+    e.preventDefault()
 
 
     const email = document.querySelector('#logemail').value
@@ -92,5 +92,5 @@ loginForm.addEventListener('click', (e) => {
     window.location.href = '../paginas/catalogo.html'
 
 
-   
+
 })

@@ -1,5 +1,7 @@
 la Entrega consta de : 
 
 por un lado un login funcional con registro (con funcion de inputs vacios a rellenar , registro en LS , href hacia pagina de catalogo  ) + css + funciones para movimiento en js
-por otro lado el catalogo con 6 productos utilizando lo solicitado para esta entrega final . 
+por otro lado el catalogo con 6 productos utilizando lo solicitado para esta entrega final ( en el caso del catalogo podra comprar haciendo click en el boton de agregar al carrito y una vez que elegio el prodcuto puede corroborar la compra apretando carrito donde como opcion tendra o seguir comprando o bien finalizar la compra) . 
+
+
 
